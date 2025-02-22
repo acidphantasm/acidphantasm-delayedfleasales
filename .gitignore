@@ -1,0 +1,7 @@
+/.buildignore
+/.eslintignore
+/.eslintrc.json
+/dist
+/node_modules
+/README.md
+/types

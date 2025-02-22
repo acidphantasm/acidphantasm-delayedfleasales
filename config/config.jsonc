@@ -1,0 +1,10 @@
+{
+    // Percent chance the sale is immediate, if it fails to sell immediately, it will sell between your minimum and maximum delay.
+    "chanceToInstantSell": 25,
+
+    // Minimum amount of time before you can receive roubles for a sale
+    "minimumDelay": 60,
+
+    // Maximum amount of time to receive roubles from a sale
+    "maximumDelay": 900
+}
