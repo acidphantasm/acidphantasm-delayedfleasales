@@ -17,7 +17,7 @@ export class CustomRagfairSellHelper extends RagfairSellHelper
         @inject("RandomUtil") protected randomUtil: RandomUtil,
         @inject("TimeUtil") protected timeUtil: TimeUtil,
         @inject("DatabaseService") protected databaseService: DatabaseService,
-        @inject("ConfigServer") protected configServer: ConfigServer,
+        @inject("ConfigServer") protected configServer: ConfigServer
     )
     {
         super(logger, randomUtil, timeUtil, databaseService, configServer);

@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { VFS } from "@spt/utils/VFS";
 import { inject, injectable } from "tsyringe";
 import { jsonc } from "jsonc";
 import path from "path";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
+import { FileSystemSync } from "@spt/utils/FileSystemSync";
 
 @injectable()
 export class ModConfig
@@ -12,10 +12,10 @@ export class ModConfig
 
     constructor(
         @inject("PrimaryLogger") protected logger: ILogger,
-        @inject("VFS") protected vfs: VFS
+        @inject("FileSystemSync") protected fileSystemSync: FileSystemSync
     )
     {
-        ModConfig.config = jsonc.parse(this.vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")));
+        ModConfig.config = jsonc.parse(this.fileSystemSync.read(path.resolve(__dirname, "../config/config.jsonc")));
     }
 
     public validateConfig(): void
